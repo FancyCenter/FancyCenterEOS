@@ -1,0 +1,591 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "addhash",
+            "base": "",
+            "fields": [
+                {
+                    "name": "_seed_hash",
+                    "type": "checksum256"
+                }
+            ]
+        },
+        {
+            "name": "additem",
+            "base": "",
+            "fields": [
+                {
+                    "name": "_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_chance",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_bet",
+                    "type": "int64"
+                },
+                {
+                    "name": "_item_price",
+                    "type": "int64"
+                },
+                {
+                    "name": "_duration_days",
+                    "type": "uint8"
+                },
+                {
+                    "name": "_allowed_free_try",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "addlonggame",
+            "base": "",
+            "fields": [
+                {
+                    "name": "_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_bet",
+                    "type": "int64"
+                },
+                {
+                    "name": "_item_price",
+                    "type": "int64"
+                },
+                {
+                    "name": "_duration_days",
+                    "type": "uint8"
+                },
+                {
+                    "name": "_tickets_total",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_check_hash",
+                    "type": "checksum256"
+                }
+            ]
+        },
+        {
+            "name": "avail_long_games",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "bet",
+                    "type": "int64"
+                },
+                {
+                    "name": "item_price",
+                    "type": "int64"
+                },
+                {
+                    "name": "ends_at",
+                    "type": "uint64"
+                },
+                {
+                    "name": "total_days_duration",
+                    "type": "uint8"
+                },
+                {
+                    "name": "added_at",
+                    "type": "uint32"
+                },
+                {
+                    "name": "trx_added",
+                    "type": "checksum256"
+                },
+                {
+                    "name": "status",
+                    "type": "uint64"
+                },
+                {
+                    "name": "tickets_total",
+                    "type": "uint64"
+                },
+                {
+                    "name": "tickets_sold",
+                    "type": "uint64"
+                },
+                {
+                    "name": "tickets_left",
+                    "type": "uint64"
+                },
+                {
+                    "name": "first_ticket_index",
+                    "type": "uint64"
+                },
+                {
+                    "name": "most_likely_winner_payout",
+                    "type": "int64"
+                },
+                {
+                    "name": "winner_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "result_tx",
+                    "type": "checksum256"
+                },
+                {
+                    "name": "winner_payout",
+                    "type": "int64"
+                },
+                {
+                    "name": "winner_name",
+                    "type": "name"
+                },
+                {
+                    "name": "players_seed_sum",
+                    "type": "uint64"
+                },
+                {
+                    "name": "fancycenter_check_hash",
+                    "type": "checksum256"
+                },
+                {
+                    "name": "fancycenter_seed",
+                    "type": "uint32"
+                },
+                {
+                    "name": "fancycenter_secret",
+                    "type": "string"
+                },
+                {
+                    "name": "who_revealed",
+                    "type": "uint8"
+                }
+            ]
+        },
+        {
+            "name": "available_games",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "id_ref_item",
+                    "type": "uint64"
+                },
+                {
+                    "name": "user_bet_time",
+                    "type": "uint32"
+                },
+                {
+                    "name": "status",
+                    "type": "uint64"
+                },
+                {
+                    "name": "player",
+                    "type": "name"
+                },
+                {
+                    "name": "fancycenter_check_hash",
+                    "type": "checksum256"
+                },
+                {
+                    "name": "fancycenter_seed",
+                    "type": "uint32"
+                },
+                {
+                    "name": "fancycenter_secret",
+                    "type": "string"
+                },
+                {
+                    "name": "player_seed",
+                    "type": "uint32"
+                },
+                {
+                    "name": "player_lucky_number",
+                    "type": "uint32"
+                },
+                {
+                    "name": "calculated_lucky_win_number",
+                    "type": "uint32"
+                },
+                {
+                    "name": "trx_created",
+                    "type": "checksum256"
+                },
+                {
+                    "name": "trx_revealed",
+                    "type": "checksum256"
+                },
+                {
+                    "name": "who_revealed",
+                    "type": "uint8"
+                },
+                {
+                    "name": "memo_card",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "available_hashes",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "seed_hash",
+                    "type": "checksum256"
+                }
+            ]
+        },
+        {
+            "name": "available_items",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "chance",
+                    "type": "uint64"
+                },
+                {
+                    "name": "bet",
+                    "type": "int64"
+                },
+                {
+                    "name": "item_price",
+                    "type": "int64"
+                },
+                {
+                    "name": "ends_at",
+                    "type": "uint64"
+                },
+                {
+                    "name": "total_games_played",
+                    "type": "uint64"
+                },
+                {
+                    "name": "total_days_duration",
+                    "type": "uint8"
+                },
+                {
+                    "name": "added_at",
+                    "type": "uint32"
+                },
+                {
+                    "name": "trx_added",
+                    "type": "checksum256"
+                },
+                {
+                    "name": "allowed_free_try",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "finalizelong",
+            "base": "",
+            "fields": [
+                {
+                    "name": "_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_seed",
+                    "type": "uint32"
+                },
+                {
+                    "name": "_secret",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "free_games",
+            "base": "",
+            "fields": [
+                {
+                    "name": "player",
+                    "type": "name"
+                },
+                {
+                    "name": "when",
+                    "type": "uint32"
+                }
+            ]
+        },
+        {
+            "name": "freetry",
+            "base": "",
+            "fields": [
+                {
+                    "name": "player",
+                    "type": "name"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "initcontract",
+            "base": "",
+            "fields": []
+        },
+        {
+            "name": "long_games_bets",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "longgame_ref_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "longgame_betid",
+                    "type": "uint64"
+                },
+                {
+                    "name": "player",
+                    "type": "name"
+                },
+                {
+                    "name": "bet_at",
+                    "type": "uint32"
+                },
+                {
+                    "name": "bet_tx",
+                    "type": "checksum256"
+                },
+                {
+                    "name": "memo_card",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "refs_data",
+            "base": "",
+            "fields": [
+                {
+                    "name": "player",
+                    "type": "name"
+                },
+                {
+                    "name": "who_invited",
+                    "type": "name"
+                },
+                {
+                    "name": "earned",
+                    "type": "uint64"
+                },
+                {
+                    "name": "was_invited",
+                    "type": "bool"
+                },
+                {
+                    "name": "invited_at",
+                    "type": "int32"
+                }
+            ]
+        },
+        {
+            "name": "reqlongfee",
+            "base": "",
+            "fields": [
+                {
+                    "name": "receiver",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "reveal",
+            "base": "",
+            "fields": [
+                {
+                    "name": "_game_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_fancycenter_seed",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_fancycenter_secret",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "setcstatus",
+            "base": "",
+            "fields": [
+                {
+                    "name": "_status",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "state_data",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "is_contract_active",
+                    "type": "bool"
+                },
+                {
+                    "name": "games_table_last_index",
+                    "type": "uint64"
+                },
+                {
+                    "name": "total_players_payout",
+                    "type": "int64"
+                },
+                {
+                    "name": "hashes_last_used",
+                    "type": "uint64"
+                },
+                {
+                    "name": "hashes_last_index",
+                    "type": "uint64"
+                },
+                {
+                    "name": "longgames_bets_count",
+                    "type": "uint64"
+                },
+                {
+                    "name": "longgame_fee_avail",
+                    "type": "int64"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "addhash",
+            "type": "addhash",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "additem",
+            "type": "additem",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "addlonggame",
+            "type": "addlonggame",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "finalizelong",
+            "type": "finalizelong",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "freetry",
+            "type": "freetry",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "initcontract",
+            "type": "initcontract",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "reqlongfee",
+            "type": "reqlongfee",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "reveal",
+            "type": "reveal",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setcstatus",
+            "type": "setcstatus",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "freegames",
+            "type": "free_games",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "games",
+            "type": "available_games",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "hashes",
+            "type": "available_hashes",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "items",
+            "type": "available_items",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "longbets",
+            "type": "long_games_bets",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "longgames",
+            "type": "avail_long_games",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "refstable",
+            "type": "refs_data",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "state",
+            "type": "state_data",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": []
+}
