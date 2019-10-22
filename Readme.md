@@ -16,7 +16,7 @@ Have you already used our free ticket for Apple Watch Series 3? Find more by goi
 ## Check Sourcecode Integrity
 FancyCenter smartcontact was created using CDT v1.6.2, compilation command is ```eosio-cpp fancycenter.cpp -o fancycenter.wasm```
 
-EOS account: **fancycenter5** <https://bloks.io/account/fancycenter5?loadContract=true&tab=Tables&limit=100&table=items>
+EOS account: **fancycenter5** <https://bloks.io/account/fancycenter5>
 
 EOSPark source code verification doesn't support contracts created using CDTs newer than CDT v 1.5.
 As mentioned here <https://eosio.github.io/eosio.cdt/latest/upgrading/1.5-to-1.6> there is no source code compatibility.
