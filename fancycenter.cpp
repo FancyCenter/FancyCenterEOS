@@ -1,4 +1,4 @@
-// edit: Oct 22th, 2019
+// edit: Oct 28th, 2019
 
 #include <eosio/eosio.hpp>
 #include <eosio/system.hpp>
@@ -8,7 +8,7 @@
 #include <eosio/asset.hpp>
 #include <eosio/symbol.hpp>
 
-#define REF_BONUS_QUANTITY 10000
+#define REF_BONUS_QUANTITY 5000
 #define CORE_SYMBOL symbol("EOS", 4)
 #define MAX_REVEAL_WAIT (60 * 60 * 24)        // 24 hours. Max wait time until allow anyone to reveal game instead of '_self'  
 #define FANCYCENTER_SEED_SECRET_STR_LENGTH 72 // proof that fancyCenter won't play with seed to adjust winner. This var prevents length extensions attack from fancycenter on generated fancycenter_seed. (https://en.wikipedia.org/wiki/Length_extension_attack, https://github.com/iagox86/hash_extender/blob/master/README.md) 
@@ -414,7 +414,7 @@ class [[eosio::contract]] fancycenter : public eosio::contract {
 
         }
 
-        // and finally send 1.0000 EOS to who_invited
+        // and finally send 0.5000 EOS to who_invited
 
         std:string memo_str = "Ref bonus, u invited: ";
         const std::string string_player = current_player.to_string();
@@ -521,7 +521,7 @@ class [[eosio::contract]] fancycenter : public eosio::contract {
     }
 
     // only owner - init EOS smart contract 
-    [[eosio::action]]
+    /*[[eosio::action]]
     void initcontract() {
       require_auth(_self);
       auto iterator = _state.find(0);
@@ -536,7 +536,7 @@ class [[eosio::contract]] fancycenter : public eosio::contract {
       _hashes.emplace(_self, [&](auto& new_hash){
         new_hash.id = 0;
       });
-    }
+    }*/
 
     // only owner - pause | resume smart contract
     [[eosio::action]]
@@ -756,23 +756,4 @@ class [[eosio::contract]] fancycenter : public eosio::contract {
       });
     }
 
-    // only owner - request dev fee payout
-    [[eosio::action]]
-    void reqlongfee(name receiver) {
-      require_auth(_self);
-      auto iterator_state = _state.find(0);
-      check((*iterator_state).longgame_fee_avail > 0, "No Fee Available");
-
-      asset quantity = asset{(*iterator_state).longgame_fee_avail, CORE_SYMBOL};
-      std::string memo = "Dev Fee Long Payout";
-      action{
-        permission_level{_self, "active"_n},
-        "eosio.token"_n, "transfer"_n,
-        std::make_tuple(_self, receiver, quantity, memo)
-      }.send();
-
-      _state.modify(iterator_state, _self, [&](auto& state_row) {
-        state_row.longgame_fee_avail = 0;
-      });
-    }
 };

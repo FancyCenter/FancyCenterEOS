@@ -27,4 +27,4 @@ There are few simple steps to check FancyCenter smart contract source code integ
  - execute ```cleos -u https://api.eosnewyork.io get code fancycenter5``` and save. This is sha256 of source code retrieved from EOS blockchain
  - compare results. sha256 from blockchain should be equal to sha256 of wasm file
  
- or you can skip step 1 and checkout generated fancycenter.wasm from this repository. For current version shasum is **1ab2b6f7657a093b902c02612dbd8ead635383e0c3ee4d9516b52211ceb75fce**
+ or you can skip step 1 and checkout generated fancycenter.wasm from this repository. For current version shasum is **34cd6755bca9ed0f233d343208b7a076e49ce81e8d4382df90a0a6a4d6f84622**

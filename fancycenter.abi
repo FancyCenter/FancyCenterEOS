@@ -340,11 +340,6 @@
             ]
         },
         {
-            "name": "initcontract",
-            "base": "",
-            "fields": []
-        },
-        {
             "name": "long_games_bets",
             "base": "",
             "fields": [
@@ -401,16 +396,6 @@
                 {
                     "name": "invited_at",
                     "type": "int32"
-                }
-            ]
-        },
-        {
-            "name": "reqlongfee",
-            "base": "",
-            "fields": [
-                {
-                    "name": "receiver",
-                    "type": "name"
                 }
             ]
         },
@@ -505,16 +490,6 @@
         {
             "name": "freetry",
             "type": "freetry",
-            "ricardian_contract": ""
-        },
-        {
-            "name": "initcontract",
-            "type": "initcontract",
-            "ricardian_contract": ""
-        },
-        {
-            "name": "reqlongfee",
-            "type": "reqlongfee",
             "ricardian_contract": ""
         },
         {
