@@ -1,7 +1,7 @@
 ![](https://assets.fancy.center/assets/og_img_optimized.jpg)
 
 ## FancyCenter
-Have you been dreaming of a cool car, a new gadget or some other luxury product? We are giving you a unique opportunity to buy them for a token amount of money, ranging from $1 to $20.
+Have you been dreaming of a cool car, a new gadget or some other luxury product? We are giving you a unique opportunity to buy them for a token amount of money, ranging from $1 to $5.
 
 ## What's inside
 This repository contains EOS based smart contract for <https://fancy.center> website.
